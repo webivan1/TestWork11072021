@@ -26,6 +26,7 @@ docker-compose run --rm crud-php-cli composer install
 
 # Create a database name
 docker-compose run --rm crud-php-cli php bin/console doctrine:database:create
+-- you can catch an error about this DB already exists, no worries
 
 # Execute all migrations
 docker-compose run --rm crud-php-cli php bin/console doctrine:migrations:migrate
